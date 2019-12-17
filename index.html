@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue Testing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/taskbar.css" />
+    <script src="js/lib/tween.js"></script>
+    <link href="fonts/win98.ttf" type="stylesheet">
+</head>
+<body>
+    <div @mousemove="mouseMove" @mouseup="mouseUp" @mousedown="mouseDown" id="windows-demo">
+        <div id="everything-container">
+            <div id="active-windows">
+                <view-window v-for="window in activeWindows" :id="window.id" :resizable="window.resizable" :content="window.content" :title="window.title" :mouseups="mouseUpWatcher" :maincontainer.sync="mainContainer" :isMouseClicked.sync="clicked" :mouseX.sync="mouseX" :mouseY.sync="mouseY">
+                    
+                </view-window>
+            </div>
+            <taskbar></taskbar>
+            <start-menu :hidden="!startMenuOpen"></start-menu>
+        </div>
+    </div>
+
+    <script src="js/lib/vue.min.js"></script>
+    <script src="js/program.js"></script>
+    <script src="js/window.js"></script>
+    <script src="js/win-button.js"></script>
+    <script src="js/win-vs.js"></script>
+    <script src="js/Minesweeper.js"></script>
+    <script src="js/start-menu-item.js"></script>
+    <script src="js/start-menu.js"></script>
+    <script src="js/taskbar.js"></script>
+</body>
+</html>

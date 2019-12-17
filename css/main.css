@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'win98';
+    src:url('../fonts/win98.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        url('../fonts/win98.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+div{
+    box-sizing: border-box;
+}
+
+#windows-demo, #everything-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    background-color: #008181;
+    user-select: none;
+    font-family: "win98";
+    font-size: 10px;
+    overflow: hidden;
+}
+
+.container-styling {
+    display: inline-block;
+    background-color: #d7d6d1;
+    color: #d7d6d1;
+    font-weight: bold;
+    padding: 2px;
+    border: 2px outset #fff;
+}
+
+.view-window{
+    position: absolute; 
+    display: inline-block;
+    background-color: #d7d6d1;
+    color: #d7d6d1;
+    font-weight: bold;
+    padding: 2px;
+    border: 2px outset #fff;
+    box-shadow: 2px 2px 4px black;
+    min-width: 100px;
+}
+.view-window-toolbar{
+    width: calc(100%);
+    padding-bottom: 3px;
+    height: 24px;
+    background-color: #808080;
+}
+
+.view-window-toolbar:hover{
+    cursor: move;
+}
+
+.view-window-content{
+    padding: 5px;
+    background-color: #d7d6d1;
+    height: calc(100% - 32px);
+    display: inline-block;
+    width: calc(100% - 8px);
+    overflow: hidden;
+    color: #000;
+    font-weight: normal;
+}
+
+.corner{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+}
+.bottom-left-corner:hover, .top-right-corner:hover{
+    cursor: nesw-resize;
+}
+
+.top-left-corner:hover, .bottom-right-corner:hover{
+    cursor: nwse-resize;
+}
+
+.bottom-right-corner{
+    right: -5px;
+    bottom: -5px;
+}
+
+.top-right-corner{
+    right: -5px;
+    top: -5px;
+}
+
+.top-left-corner{
+    left: -5px;
+    top: -5px;
+}
+
+.bottom-left-corner{
+    left: -5px;
+    bottom: -5px;
+}
+
+.cap{
+    width: calc(100% - 20px);
+    cursor: ns-resize;
+    height: 10px;
+    position: absolute;
+    left: 10px;
+}
+
+.side{
+    width: 10px;
+    cursor: ew-resize;
+    height: calc(100% - 20px);
+    position: absolute;
+    top: 10px;
+}
+
+.bottom-side{
+    bottom: -5px;
+}
+
+.top-side{
+    top: -5px;
+}
+
+.right-side{
+    right: -5px;
+}
+
+.left-side{
+    left: -5px;
+}
+
+
+.toolbar-button {
+    height: 20px;
+    width: 20px;
+    color: #000;
+    text-align: center;
+    margin-top: 2px;
+    font-size: 13px;
+    line-height: 7px;
+    font-family: Marlett;
+}
+
+.view-window-toolbar .toolbar-button:last-child{
+    margin-right: 2px;
+}
+
+.toolbar-button:hover {
+    cursor: pointer;
+}
+
+.toolbar-button:active {
+    cursor: pointer;
+    border: 2px inset white;
+}
+
+.toolbar-title{
+    float: left;
+    padding: 3px;
+}
